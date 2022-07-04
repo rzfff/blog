@@ -80,7 +80,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: /img/custom/5O1day2nriDzjSu.png
   effect: false
 
 # Disable all banner image
@@ -90,7 +90,7 @@ disable_top_img: false
 index_img:
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: rgba(0, 0, 0, 0)
 
 # The banner image of archive page
 archive_img:
@@ -222,7 +222,7 @@ photofigcaption: false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 1
+post_pagination: false
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
@@ -406,9 +406,9 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2022
   custom_text:
-  copyright: true # Copyright of theme and framework
+  copyright: false # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -499,10 +499,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)
 
 # Footer Background
-footer_bg: false
+footer_bg: rgba(0, 0, 0, 0)
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -582,7 +582,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
+  global-font-size: 16px
   code-font-size:
   font-family:
   code-font-family:
@@ -915,3 +915,50 @@ CDN:
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
+
+# footer_beautify
+# 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
+# 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
+footer_beautify:
+  enable:
+    timer: true # 计时器开关
+    bdage: true # 徽标开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude: #屏蔽页面
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: id
+    name: footer-wrap
+    index: 0
+  # 计时器部分配置项
+  runtime_js: /js/custom/runtime.js
+  runtime_css: /css/custom/runtime.css
+  # 徽标部分配置项
+  swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
+  bdageitem:
+    - link: https://hexo.io/ #徽标指向网站链接
+      shields: /blog/img/custom/Frame-Hexo-blue.svg #徽标API
+      message: 框架Hexo #徽标提示语
+    - link: https://github.com/jerryc127/hexo-theme-butterfly/
+      shields: /blog/img/custom/Theme-Butterfly-6513df.svg
+      message: 主题Butterfly
+    - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+      shields: /blog/img/custom/Copyright-BY--NC--SA_4.svg
+      message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+    # - link: https://www.jsdelivr.com/
+    #   shields: https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
+    #   message: 本站使用JsDelivr为静态资源提供CDN加速
+    # - link: https://vercel.com/
+    #   shields: https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&logo=Vercel
+    #   message: 本站采用双线部署，默认线路托管于Vercel
+    # - link: https://vercel.com/
+    #   shields: https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio
+    #   message: 本站采用双线部署，联通线路托管于Coding
+    # - link: https://github.com/
+    #   shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
+    #   message: 本站项目由Github托管
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
