@@ -1,0 +1,102 @@
+:root{
+  /* 卡片背景颜色 */
+  --light-card-bg: rgba(255, 255, 255, 0.8);
+  --dark-card-bg: rgba(255, 255, 255, 0.067);
+}
+
+/* 页面背景 */
+#web_bg {
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+[data-theme="dark"] #web_bg {
+  background: linear-gradient(90deg, #2c0c16 0%, #043749 100%);
+}
+[data-theme="dark"] #web_bg::before {
+  background-color: transparent !important;
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+  background: var(--light-card-bg);
+}
+/* 首页侧栏卡片 */
+.card-widget {
+  background: var(--light-card-bg) !important;
+}
+/* 文章页面正文背景 */
+div#post {
+  background: var(--light-card-bg);
+}
+/* 分页页面 */
+div#page {
+  background: var(--light-card-bg);
+}
+/* 归档页面 */
+div#archive {
+  background: var(--light-card-bg);
+}
+/* 标签页面 */
+div#tag {
+  background: var(--light-card-bg);
+}
+/* 分类页面 */
+div#category {
+  background: var(--light-card-bg);
+}
+/* 页脚透明 */
+#footer {
+  background: transparent !important;
+}
+/* 页脚黑色透明玻璃效果移除 */
+#footer::before {
+  background: transparent !important;
+}
+/* 头图透明 */
+#page-header {
+  background: transparent !important;
+}
+/* 头图遮罩层透明 */
+#page-header::before {
+  background: transparent !important;
+}
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+  background-color: transparent !important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式 */
+/* 首页文章卡片 */
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  background: var(--dark-card-bg);
+}
+/* 首页侧栏卡片 */
+[data-theme="dark"] .card-widget {
+  background: var(--dark-card-bg) !important;
+}
+/* 文章页面正文背景 */
+[data-theme="dark"] div#post {
+  background: var(--dark-card-bg);
+}
+/* 分页页面 */
+[data-theme="dark"] div#page {
+  background: var(--dark-card-bg);
+}
+/* 归档页面 */
+[data-theme="dark"] div#archive {
+  background: var(--dark-card-bg);
+}
+/* 标签页面 */
+[data-theme="dark"] div#tag {
+  background: var(--dark-card-bg);
+}
+/* 分类页面 */
+[data-theme="dark"] div#category {
+  background: var(--dark-card-bg);
+}
