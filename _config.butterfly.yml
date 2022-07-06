@@ -10,6 +10,9 @@ menu:
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
+  Files||fas fa-folders:
+    ????: /share/ || fas fa-question
+    File Browser: /filebrowser/ fas fa-cloud-download
   Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
@@ -837,11 +840,11 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="/blog/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'">
-    - <link rel="stylesheet" href="/blog/css/custom/fixed_comment.css"  media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom/fixed_comment.css"  media="defer" onload="this.media='all'">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    - <script data-pjax defer src="/blog/js/custom/fixed_comment.js"></script>
+    - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
     # - <script src="xxxx"></script>
 
 # CDN
@@ -939,16 +942,16 @@ footer_beautify:
   swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
   bdageitem:
     - link: https://hexo.io/ #徽标指向网站链接
-      shields: /blog/img/custom/Frame-Hexo-blue.svg #徽标API
+      shields: /img/custom/Frame-Hexo-blue.svg #徽标API
       message: 框架Hexo #徽标提示语
     - link: https://github.com/jerryc127/hexo-theme-butterfly/
-      shields: /blog/img/custom/Theme-Butterfly-6513df.svg
+      shields: /img/custom/Theme-Butterfly-6513df.svg
       message: 主题Butterfly
     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      shields: /blog/img/custom/Copyright-BY--NC--SA_4.svg
+      shields: /img/custom/Copyright-BY--NC--SA_4.svg
       message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
     - link: https://icp.gov.moe/?keyword=20224404
-      shields: /blog/img/custom/萌ICP备-20224404-fe1384.svg
+      shields: /img/custom/萌ICP备-20224404-fe1384.svg
       message: 萌ICP备-20224404号
     # - link: https://www.jsdelivr.com/
     #   shields: https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
