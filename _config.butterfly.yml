@@ -3,15 +3,18 @@
 # --------------------------------------
 
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    Music: /music/ || fas fa-music
-    Movie: /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+  (┬┬﹏┬┬)...　　　　　　　　　　: / || fa-solid fa-lg fa-circle-radiation fa-spin
+  主页: / || fa-solid fa-seedling
+  文章||fas fa-map-signs:
+    时间: /archives/ || fas fa-history
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
+  留言板: /comments/ || fas fa-envelope-open-text
+  友情链接: /link/ || fas fa-link
+  其他||fa-brands fa-pagelines:
+    File Browser: /filebrowser/ || fas fa-cloud-download
+    ????: /share/ || fas fa-question
+  关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -837,11 +840,11 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="/blog/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'">
-    - <link rel="stylesheet" href="/blog/css/custom/fixed_comment.css"  media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom/fixed_comment.css"  media="defer" onload="this.media='all'">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    - <script data-pjax defer src="/blog/js/custom/fixed_comment.js"></script>
+    - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
     # - <script src="xxxx"></script>
 
 # CDN
@@ -916,6 +919,7 @@ CDN:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
 
+###############################自定义插件###############################
 # footer_beautify
 # 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
 # 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
@@ -939,14 +943,17 @@ footer_beautify:
   swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
   bdageitem:
     - link: https://hexo.io/ #徽标指向网站链接
-      shields: /blog/img/custom/Frame-Hexo-blue.svg #徽标API
+      shields: /img/custom/Frame-Hexo-blue.svg #徽标API
       message: 框架Hexo #徽标提示语
     - link: https://github.com/jerryc127/hexo-theme-butterfly/
-      shields: /blog/img/custom/Theme-Butterfly-6513df.svg
+      shields: /img/custom/Theme-Butterfly-6513df.svg
       message: 主题Butterfly
     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      shields: /blog/img/custom/Copyright-BY--NC--SA_4.svg
+      shields: /img/custom/Copyright-BY--NC--SA_4.svg
       message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+    - link: https://icp.gov.moe/?keyword=20224404
+      shields: /img/custom/萌ICP备-20224404-fe1384.svg
+      message: 萌ICP备-20224404号
     # - link: https://www.jsdelivr.com/
     #   shields: https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
     #   message: 本站使用JsDelivr为静态资源提供CDN加速
@@ -962,3 +969,24 @@ footer_beautify:
   swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
   swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
+
+# envelope_comment
+# see https://akilar.top/posts/e2d3c450/
+envelope_comment:
+  enable: true #控制开关
+  custom_pic:      
+    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+  message: #信笺正文，多行文本，写法如下
+    - 有什么想问的？
+    - 有什么想说的？
+    - 有什么想吐槽的？
+    - 都可以告诉我哦~
+  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
+  height: #1050px，信封划出的高度
+  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+  front_matter: #【可选】comments页面的 front_matter 配置
+    title: 留言板
+    comments: true
