@@ -133,7 +133,7 @@
 }
 .tk-content:hover + .tk-extras {
   position: relative;
-  left: calc(2%);
+  left: 8px;
 }
 /* 自适应内容 */
 @media screen and (min-width: 1024px) {
@@ -158,10 +158,10 @@
   .tk-master .tk-row[data-v-d82ce9a0] {
     position: relative;
     top: 0;
-    left: calc(56%);
+    left: calc(54%);
   }
   .tk-master .tk-content:hover + .tk-extras {
-    left: calc(79%);
+    left: 80px;
   }
   [data-theme="dark"] .tk-master .tk-content::before {
     border-left: 15px solid #000;
