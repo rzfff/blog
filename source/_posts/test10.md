@@ -1,13 +1,14 @@
 ---
-title: test7
-date: 2022-07-04 11:26:27
+title: test10
+date: 2022-07-07 12:00:00
 categories:
 - [c1]
 - [c2, c2-1]
 tags:
 - tag1
 - tag2
-cover_number: '000007'
+cover: https://www.anhappy.com/source/73634202_p0.jpg
+cover_number: '000010'
 ---
 ## Quick Start
 

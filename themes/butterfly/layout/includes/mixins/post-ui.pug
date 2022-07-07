@@ -8,10 +8,17 @@ mixin postUI(posts)
         let leftOrRight = position === 'both'
           ? index%2 == 0 ? 'left' : 'right'
           : position === 'left' ? 'left' : 'right'
+        let post_cover_custom = article.cover_number !== undefined ? article.cover_number.toString().split('') : ''
         let post_cover = article.cover
         let no_cover = article.cover === false || !theme.cover.index_enable ? 'no-cover' : ''
       -
-      if post_cover && theme.cover.index_enable
+      if post_cover_custom && theme.cover.index_enable
+        .post_cover.post_cover_custom(class=leftOrRight)
+          a.post_cover_custom_a(href=url_for(link) title=title)
+            .post_cover_custom_div
+              each item, index in post_cover_custom
+                img.post_bg.post_cover_custom_img(src=url_for(`/img/custom/` + item + `.gif`) onerror=`this.onerror=null;this.src='`+ url_for(theme.error_img.post_page) + `'` alt=title)
+      else if post_cover && theme.cover.index_enable
         .post_cover(class=leftOrRight)
           a(href=url_for(link) title=title)
             img.post_bg(src=url_for(post_cover) onerror=`this.onerror=null;this.src='`+ url_for(theme.error_img.post_page) + `'` alt=title)
