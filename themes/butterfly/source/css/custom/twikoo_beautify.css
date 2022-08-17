@@ -98,7 +98,7 @@
   border-right: 15px solid #ff8080; /*默认模式博主气泡小三角配色*/
   border-left: 0px solid transparent;
 }
-.tk-row[data-v-d82ce9a0] {
+.tk-main .tk-row {
   max-width: 100%;
   width: fit-content;
   margin-left: 10px;
@@ -159,7 +159,7 @@
     position: relative;
     left: calc(75% + 120px);
   }
-  .tk-master .tk-row[data-v-d82ce9a0] {
+  .tk-master .tk-main .tk-row {
     position: relative;
     top: 0;
     left: calc(54%);
