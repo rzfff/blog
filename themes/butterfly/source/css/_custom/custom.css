@@ -1,4 +1,4 @@
-:root{
+:root {
   /* 卡片背景颜色 */
   --light-card-bg: rgba(255, 255, 255, 0.8);
   --dark-card-bg: rgba(255, 255, 255, 0.067);
@@ -20,12 +20,12 @@
   background: var(--light-card-bg);
 }
 /* 首页侧栏卡片 */
-.card-widget {
+#aside-content .card-widget {
   background: var(--light-card-bg) !important;
 }
 /* 文章页面正文背景 */
 div#post {
-  background: var(--light-card-bg);
+  background: var(--light-card-bg) !important;
 }
 /* 分页页面 */
 div#page {
@@ -43,6 +43,14 @@ div#tag {
 div#category {
   background: var(--light-card-bg);
 }
+/* 阅读模式 */
+/* .read-mode #aside-content .card-widget {
+  background: rgba(158, 204, 171, 0.5) !important;
+}
+.read-mode div#post {
+  background: rgba(158, 204, 171, 0.5) !important;
+} */
+
 /* 页脚透明 */
 #footer {
   background: transparent !important;
@@ -77,12 +85,12 @@ div#category {
   background: var(--dark-card-bg);
 }
 /* 首页侧栏卡片 */
-[data-theme="dark"] .card-widget {
+[data-theme="dark"] #aside-content .card-widget {
   background: var(--dark-card-bg) !important;
 }
 /* 文章页面正文背景 */
 [data-theme="dark"] div#post {
-  background: var(--dark-card-bg);
+  background: var(--dark-card-bg) !important;
 }
 /* 分页页面 */
 [data-theme="dark"] div#page {
@@ -99,4 +107,31 @@ div#category {
 /* 分类页面 */
 [data-theme="dark"] div#category {
   background: var(--dark-card-bg);
+}
+/* 阅读模式 */
+/* [data-theme="dark"] .read-mode #aside-content .card-widget {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff;
+}
+[data-theme="dark"] .read-mode div#post {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff;
+} */
+.post_cover_custom {
+  display: table;
+}
+.post_cover_custom_a {
+  display: table-cell;
+  vertical-align: middle;
+}
+.post_cover_custom_div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0px;
+  padding: 0px 20px;
+}
+.post_cover_custom_img {
+  width: unset !important;
+  height: unset !important;
 }
