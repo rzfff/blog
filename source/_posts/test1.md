@@ -7,6 +7,7 @@ categories:
 tags:
 - tag1
 - tag2
+cover_number: '000001'
 ---
 ## Quick Start
 
