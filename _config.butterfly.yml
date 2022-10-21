@@ -38,8 +38,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://github.com/rzfff || Github
+  fas fa-envelope: mailto:ggrzfff@gmail.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -341,7 +341,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo-seven-silk.vercel.app/
+  envId: https://www.anhappy.com/twikoo84/
   region: ap-shanghai
   visitor: true
   option:
@@ -642,7 +642,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/rzfff
   card_announcement:
     enable: true
     content: This is my Blog
