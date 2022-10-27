@@ -1,13 +1,15 @@
 ---
 title: test6
-date: 2022-07-04 11:24:27
 categories:
-- [c1]
-- [c2, c2-1]
+  - - c1
+  - - c2
+    - c2-1
 tags:
-- tag1
-- tag2
+  - tag1
+  - tag2
 cover_number: '000006'
+abbrlink: 14d64941
+date: 2022-07-04 11:24:27
 ---
 ## Quick Start
 
