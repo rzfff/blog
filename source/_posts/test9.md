@@ -7,7 +7,7 @@ categories:
 tags:
   - tag1
   - tag2
-cover_number: 000009
+cover_number: '000009'
 abbrlink: 846954d0
 date: 2022-07-07 11:00:00
 ---

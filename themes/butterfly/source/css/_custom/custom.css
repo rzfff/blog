@@ -134,4 +134,53 @@ div#category {
 .post_cover_custom_img {
   width: unset !important;
   height: unset !important;
+  object-fit: cover;
+}
+
+/* 主页卡片左侧图片动画 */
+#recent-posts > .recent-post-item:hover .left img.post_cover_custom_img {
+  animation: bounce;
+  animation-duration: 1s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_0 {
+  animation-delay: 1.3s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_1 {
+  animation-delay: 1.1s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_2 {
+  animation-delay: 0.9s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_3 {
+  animation-delay: 0.7s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_4 {
+  animation-delay: 0.5s;
+}
+#recent-posts > .recent-post-item:hover .left img.moe_5 {
+  animation-delay: 0.3s;
+}
+
+/* 主页卡片右侧图片动画 */
+#recent-posts > .recent-post-item:hover .right img.post_cover_custom_img {
+  animation: bounce;
+  animation-duration: 1s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_0 {
+  animation-delay: 0.3s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_1 {
+  animation-delay: 0.5s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_2 {
+  animation-delay: 0.7s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_3 {
+  animation-delay: 0.9s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_4 {
+  animation-delay: 1.1s;
+}
+#recent-posts > .recent-post-item:hover .right img.moe_5 {
+  animation-delay: 1.3s;
 }
