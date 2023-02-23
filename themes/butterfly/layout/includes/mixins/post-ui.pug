@@ -11,7 +11,7 @@ mixin postUI(posts)
         let post_cover_custom = article.cover_number !== undefined ? article.cover_number.toString().split('') : ''
         let moe_count_theme = article.cover_number !== undefined && article.cover_number_theme !== undefined ? article.cover_number_theme : 'moebooru'
         let post_cover = article.cover
-        let no_cover = article.cover === false || !theme.cover.index_enable ? 'no-cover' : ''
+        let no_cover = (article.cover === false && article.cover_number === false) || !theme.cover.index_enable ? 'no-cover' : ''
       -
       if post_cover_custom && theme.cover.index_enable
         .post_cover.post_cover_custom(class=leftOrRight)
