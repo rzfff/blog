@@ -7,6 +7,7 @@ categories:
 tags:
   - tag1
   - tag2
+cover_number: '000011'
 abbrlink: cd52de3f
 date: 2022-07-09 12:00:00
 ---

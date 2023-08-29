@@ -11,14 +11,14 @@ mixin postUI(posts)
         let post_cover_custom = article.cover_number !== undefined ? article.cover_number.toString().split('') : ''
         let moe_count_theme = article.cover_number !== undefined && article.cover_number_theme !== undefined ? article.cover_number_theme : 'moebooru'
         let post_cover = article.cover
-        let no_cover = article.cover === false || !theme.cover.index_enable ? 'no-cover' : ''
+        let no_cover = (article.cover === false && article.cover_number === undefined) || !theme.cover.index_enable ? 'no-cover' : ''
       -
       if post_cover_custom && theme.cover.index_enable
         .post_cover.post_cover_custom(class=leftOrRight)
           a.post_cover_custom_a(href=url_for(link) title=title)
             .post_cover_custom_div
               each item, index in post_cover_custom
-                img.post-bg.post_cover_custom_img(src=url_for(`/img/custom/Moe-count-theme/` + moe_count_theme + `/` + item + `.gif`) onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'` alt=title)
+                img.post_cover_custom_img(class='animate__animated moe_' + index src=url_for(`/img/custom/Moe-count-theme/` + moe_count_theme + `/` + item + `.gif`) onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'` alt=title)
       else if post_cover && theme.cover.index_enable
         .post_cover(class=leftOrRight)
           a(href=url_for(link) title=title)
@@ -78,7 +78,7 @@ mixin postUI(posts)
                 block
               span.article-meta-label= ' ' + _p('card_post_count')
           
-          if theme.comments.card_post_count
+          if theme.comments.card_post_count && theme.comments.use
             case theme.comments.use[0]
               when 'Disqus'
                 +countBlockInIndex
@@ -97,7 +97,7 @@ mixin postUI(posts)
               when 'Waline'
                 +countBlockInIndex
                   a(href=url_for(link) + '#post-comment')
-                    span.waline-comment-count(id=url_for(link))
+                    span.waline-comment-count(data-path=url_for(link))
                       i.fa-solid.fa-spinner.fa-spin
               when 'Twikoo'
                 +countBlockInIndex

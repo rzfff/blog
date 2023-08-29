@@ -8,7 +8,7 @@ tags:
   - tag1
   - tag2
 cover: 'https://www.anhappy.com/source/73634202_p0.jpg'
-cover_number: '000010'
+#cover_number: '000010'
 abbrlink: ba55eea9
 date: 2022-07-07 12:00:00
 ---
