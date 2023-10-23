@@ -12,6 +12,8 @@ menu:
   友情链接: /link/ || fas fa-link
   其他||fa-brands fa-pagelines:
     File Browser: /filebrowser/ || fas fa-cloud-download
+    ChatGPT: https://chat.anhappy.com/ || fas fa-comments
+    Win12: /win12/ || fa-brands fa-windows 
     ????: /share/ || fas fa-question
   关于: /about/ || fas fa-heart
 
