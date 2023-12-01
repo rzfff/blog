@@ -9,10 +9,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.0.0-rc2"
+    "version": "7.0.0"
   },
   "dependencies": {
-    "hexo": "^7.0.0-rc2",
+    "hexo": "^7.0.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-butterfly-footer-beautify": "^1.0.6",
